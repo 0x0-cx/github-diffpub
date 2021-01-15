@@ -1,0 +1,1 @@
+(ns diffpub.object.patch)
