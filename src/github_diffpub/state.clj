@@ -5,8 +5,9 @@
 
 (def init-state {})
 
+(use 'aprint.core)
 (defn app [state req]
-  (println {:state state :req req})
+  (aprint {:state state :req req :body (some-> req :body slurp)})
   {:status  200
    :headers {"Content-Type" "text/html"}
    :body    "hello HTTP!"})
